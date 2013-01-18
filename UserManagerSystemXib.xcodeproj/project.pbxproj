@@ -15,6 +15,19 @@
 		FDA1FF2116A98F6200F4842C /* UserManagerSystemAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA1FF2016A98F6200F4842C /* UserManagerSystemAppDelegate.m */; };
 		FDA1FF2416A98F6200F4842C /* UserManagerSystemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA1FF2316A98F6200F4842C /* UserManagerSystemViewController.m */; };
 		FDA1FF2716A98F6200F4842C /* UserManagerSystemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDA1FF2516A98F6200F4842C /* UserManagerSystemViewController.xib */; };
+		FDA1FF3916A98FE600F4842C /* MCScore.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA1FF3616A98FE600F4842C /* MCScore.m */; };
+		FDA1FF3A16A98FE600F4842C /* MCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA1FF3816A98FE600F4842C /* MCUser.m */; };
+		FDA1FF4316A9900A00F4842C /* MCDBController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA1FF3C16A9900A00F4842C /* MCDBController.m */; };
+		FDA1FF4416A9900A00F4842C /* MCUserCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA1FF3E16A9900A00F4842C /* MCUserCalculator.m */; };
+		FDA1FF4516A9900A00F4842C /* MCUserManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA1FF4016A9900A00F4842C /* MCUserManagerController.m */; };
+		FDA1FF4616A9900A00F4842C /* MCUserManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA1FF4216A9900A00F4842C /* MCUserManagerModel.m */; };
+		FDA1FF5016A9903400F4842C /* PopChangeUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA1FF4816A9903400F4842C /* PopChangeUserViewController.m */; };
+		FDA1FF5116A9903400F4842C /* PopChangeUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDA1FF4916A9903400F4842C /* PopChangeUserViewController.xib */; };
+		FDA1FF5216A9903400F4842C /* PopCreateUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA1FF4B16A9903400F4842C /* PopCreateUserViewController.m */; };
+		FDA1FF5316A9903400F4842C /* PopCreateUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDA1FF4C16A9903400F4842C /* PopCreateUserViewController.xib */; };
+		FDA1FF5416A9903400F4842C /* ScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FDA1FF4E16A9903400F4842C /* ScoreCell.m */; };
+		FDA1FF5516A9903400F4842C /* ScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDA1FF4F16A9903400F4842C /* ScoreCell.xib */; };
+		FDA1FF5716A9938500F4842C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA1FF5616A9938500F4842C /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +35,37 @@
 		FDA1FF1016A98F6200F4842C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FDA1FF1216A98F6200F4842C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FDA1FF1416A98F6200F4842C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		FDA1FF1816A98F6200F4842C /* UserManagerSystemXib-Info.plist */ = {isa = PBXFileReference; path = "UserManagerSystemXib-Info.plist"; sourceTree = "<group>"; };
+		FDA1FF1816A98F6200F4842C /* UserManagerSystemXib-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UserManagerSystemXib-Info.plist"; sourceTree = "<group>"; };
 		FDA1FF1A16A98F6200F4842C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FDA1FF1C16A98F6200F4842C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FDA1FF1E16A98F6200F4842C /* UserManagerSystemXib-Prefix.pch */ = {isa = PBXFileReference; path = "UserManagerSystemXib-Prefix.pch"; sourceTree = "<group>"; };
-		FDA1FF1F16A98F6200F4842C /* UserManagerSystemAppDelegate.h */ = {isa = PBXFileReference; path = UserManagerSystemAppDelegate.h; sourceTree = "<group>"; };
+		FDA1FF1E16A98F6200F4842C /* UserManagerSystemXib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UserManagerSystemXib-Prefix.pch"; sourceTree = "<group>"; };
+		FDA1FF1F16A98F6200F4842C /* UserManagerSystemAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManagerSystemAppDelegate.h; sourceTree = "<group>"; };
 		FDA1FF2016A98F6200F4842C /* UserManagerSystemAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManagerSystemAppDelegate.m; sourceTree = "<group>"; };
-		FDA1FF2216A98F6200F4842C /* UserManagerSystemViewController.h */ = {isa = PBXFileReference; path = UserManagerSystemViewController.h; sourceTree = "<group>"; };
+		FDA1FF2216A98F6200F4842C /* UserManagerSystemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserManagerSystemViewController.h; sourceTree = "<group>"; };
 		FDA1FF2316A98F6200F4842C /* UserManagerSystemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserManagerSystemViewController.m; sourceTree = "<group>"; };
 		FDA1FF2616A98F6200F4842C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/UserManagerSystemViewController.xib; sourceTree = "<group>"; };
+		FDA1FF3516A98FE600F4842C /* MCScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCScore.h; sourceTree = "<group>"; };
+		FDA1FF3616A98FE600F4842C /* MCScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCScore.m; sourceTree = "<group>"; };
+		FDA1FF3716A98FE600F4842C /* MCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUser.h; sourceTree = "<group>"; };
+		FDA1FF3816A98FE600F4842C /* MCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUser.m; sourceTree = "<group>"; };
+		FDA1FF3B16A9900A00F4842C /* MCDBController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDBController.h; sourceTree = "<group>"; };
+		FDA1FF3C16A9900A00F4842C /* MCDBController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDBController.m; sourceTree = "<group>"; };
+		FDA1FF3D16A9900A00F4842C /* MCUserCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUserCalculator.h; sourceTree = "<group>"; };
+		FDA1FF3E16A9900A00F4842C /* MCUserCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUserCalculator.m; sourceTree = "<group>"; };
+		FDA1FF3F16A9900A00F4842C /* MCUserManagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUserManagerController.h; sourceTree = "<group>"; };
+		FDA1FF4016A9900A00F4842C /* MCUserManagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUserManagerController.m; sourceTree = "<group>"; };
+		FDA1FF4116A9900A00F4842C /* MCUserManagerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCUserManagerModel.h; sourceTree = "<group>"; };
+		FDA1FF4216A9900A00F4842C /* MCUserManagerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCUserManagerModel.m; sourceTree = "<group>"; };
+		FDA1FF4716A9903400F4842C /* PopChangeUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopChangeUserViewController.h; sourceTree = "<group>"; };
+		FDA1FF4816A9903400F4842C /* PopChangeUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopChangeUserViewController.m; sourceTree = "<group>"; };
+		FDA1FF4916A9903400F4842C /* PopChangeUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopChangeUserViewController.xib; sourceTree = "<group>"; };
+		FDA1FF4A16A9903400F4842C /* PopCreateUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopCreateUserViewController.h; sourceTree = "<group>"; };
+		FDA1FF4B16A9903400F4842C /* PopCreateUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopCreateUserViewController.m; sourceTree = "<group>"; };
+		FDA1FF4C16A9903400F4842C /* PopCreateUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopCreateUserViewController.xib; sourceTree = "<group>"; };
+		FDA1FF4D16A9903400F4842C /* ScoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreCell.h; sourceTree = "<group>"; };
+		FDA1FF4E16A9903400F4842C /* ScoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreCell.m; sourceTree = "<group>"; };
+		FDA1FF4F16A9903400F4842C /* ScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScoreCell.xib; sourceTree = "<group>"; };
+		FDA1FF5616A9938500F4842C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDA1FF5716A9938500F4842C /* libsqlite3.dylib in Frameworks */,
 				FDA1FF1116A98F6200F4842C /* UIKit.framework in Frameworks */,
 				FDA1FF1316A98F6200F4842C /* Foundation.framework in Frameworks */,
 				FDA1FF1516A98F6200F4842C /* CoreGraphics.framework in Frameworks */,
@@ -50,6 +86,7 @@
 		FDA1FF0116A98F6100F4842C = {
 			isa = PBXGroup;
 			children = (
+				FDA1FF5616A9938500F4842C /* libsqlite3.dylib */,
 				FDA1FF1616A98F6200F4842C /* UserManagerSystemXib */,
 				FDA1FF0F16A98F6200F4842C /* Frameworks */,
 				FDA1FF0D16A98F6200F4842C /* Products */,
@@ -77,11 +114,22 @@
 		FDA1FF1616A98F6200F4842C /* UserManagerSystemXib */ = {
 			isa = PBXGroup;
 			children = (
+				FDA1FF3416A98FC100F4842C /* Classes */,
+				FDA1FF3316A98FB900F4842C /* DataStructureClass */,
 				FDA1FF1F16A98F6200F4842C /* UserManagerSystemAppDelegate.h */,
 				FDA1FF2016A98F6200F4842C /* UserManagerSystemAppDelegate.m */,
 				FDA1FF2216A98F6200F4842C /* UserManagerSystemViewController.h */,
 				FDA1FF2316A98F6200F4842C /* UserManagerSystemViewController.m */,
 				FDA1FF2516A98F6200F4842C /* UserManagerSystemViewController.xib */,
+				FDA1FF4716A9903400F4842C /* PopChangeUserViewController.h */,
+				FDA1FF4816A9903400F4842C /* PopChangeUserViewController.m */,
+				FDA1FF4916A9903400F4842C /* PopChangeUserViewController.xib */,
+				FDA1FF4A16A9903400F4842C /* PopCreateUserViewController.h */,
+				FDA1FF4B16A9903400F4842C /* PopCreateUserViewController.m */,
+				FDA1FF4C16A9903400F4842C /* PopCreateUserViewController.xib */,
+				FDA1FF4D16A9903400F4842C /* ScoreCell.h */,
+				FDA1FF4E16A9903400F4842C /* ScoreCell.m */,
+				FDA1FF4F16A9903400F4842C /* ScoreCell.xib */,
 				FDA1FF1716A98F6200F4842C /* Supporting Files */,
 			);
 			path = UserManagerSystemXib;
@@ -96,6 +144,32 @@
 				FDA1FF1E16A98F6200F4842C /* UserManagerSystemXib-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FDA1FF3316A98FB900F4842C /* DataStructureClass */ = {
+			isa = PBXGroup;
+			children = (
+				FDA1FF3516A98FE600F4842C /* MCScore.h */,
+				FDA1FF3616A98FE600F4842C /* MCScore.m */,
+				FDA1FF3716A98FE600F4842C /* MCUser.h */,
+				FDA1FF3816A98FE600F4842C /* MCUser.m */,
+			);
+			name = DataStructureClass;
+			sourceTree = "<group>";
+		};
+		FDA1FF3416A98FC100F4842C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FDA1FF3B16A9900A00F4842C /* MCDBController.h */,
+				FDA1FF3C16A9900A00F4842C /* MCDBController.m */,
+				FDA1FF3D16A9900A00F4842C /* MCUserCalculator.h */,
+				FDA1FF3E16A9900A00F4842C /* MCUserCalculator.m */,
+				FDA1FF3F16A9900A00F4842C /* MCUserManagerController.h */,
+				FDA1FF4016A9900A00F4842C /* MCUserManagerController.m */,
+				FDA1FF4116A9900A00F4842C /* MCUserManagerModel.h */,
+				FDA1FF4216A9900A00F4842C /* MCUserManagerModel.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +226,9 @@
 			files = (
 				FDA1FF1B16A98F6200F4842C /* InfoPlist.strings in Resources */,
 				FDA1FF2716A98F6200F4842C /* UserManagerSystemViewController.xib in Resources */,
+				FDA1FF5116A9903400F4842C /* PopChangeUserViewController.xib in Resources */,
+				FDA1FF5316A9903400F4842C /* PopCreateUserViewController.xib in Resources */,
+				FDA1FF5516A9903400F4842C /* ScoreCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +242,15 @@
 				FDA1FF1D16A98F6200F4842C /* main.m in Sources */,
 				FDA1FF2116A98F6200F4842C /* UserManagerSystemAppDelegate.m in Sources */,
 				FDA1FF2416A98F6200F4842C /* UserManagerSystemViewController.m in Sources */,
+				FDA1FF3916A98FE600F4842C /* MCScore.m in Sources */,
+				FDA1FF3A16A98FE600F4842C /* MCUser.m in Sources */,
+				FDA1FF4316A9900A00F4842C /* MCDBController.m in Sources */,
+				FDA1FF4416A9900A00F4842C /* MCUserCalculator.m in Sources */,
+				FDA1FF4516A9900A00F4842C /* MCUserManagerController.m in Sources */,
+				FDA1FF4616A9900A00F4842C /* MCUserManagerModel.m in Sources */,
+				FDA1FF5016A9903400F4842C /* PopChangeUserViewController.m in Sources */,
+				FDA1FF5216A9903400F4842C /* PopCreateUserViewController.m in Sources */,
+				FDA1FF5416A9903400F4842C /* ScoreCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +327,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UserManagerSystemXib/UserManagerSystemXib-Prefix.pch";
 				INFOPLIST_FILE = "UserManagerSystemXib/UserManagerSystemXib-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -252,6 +339,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UserManagerSystemXib/UserManagerSystemXib-Prefix.pch";
 				INFOPLIST_FILE = "UserManagerSystemXib/UserManagerSystemXib-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
