@@ -114,6 +114,7 @@ static MCUserManagerController* sharedSingleton_ = nil;
     NSLog(@"change user");
     
     [self saveCurrentUser];
+    [self updateMyScore];
 }
 
 - (void) insertUserSuccess:(NSNotification*)_notification

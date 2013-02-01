@@ -108,14 +108,15 @@
     }
     
     //set score information
-    NSInteger row = [indexPath row];
+    NSInteger scoreIndex = [indexPath row];
     
     if (tableSegment.selectedSegmentIndex == 0) {
-        if (row < [userManagerController.userModel.topScore count]) {
+        if (scoreIndex < [userManagerController.userModel.topScore count]) {
+                    
+            MCScore *_scoreRecord = [MCScore alloc];
+            _scoreRecord = [userManagerController.userModel.topScore objectAtIndex:scoreIndex];
             
-            MCScore *_scoreRecord = [userManagerController.userModel.topScore objectAtIndex:row];
-            
-            NSString *_rank = [[NSString alloc] initWithFormat:@"%d",row+1];
+            NSString *_rank = [[NSString alloc] initWithFormat:@"%d",scoreIndex+1];
             NSString *_move = [[NSString alloc] initWithFormat:@"%d", _scoreRecord.move];
             NSString *_time = [[NSString alloc] initWithFormat:@"%0.2f", _scoreRecord.time];
             NSString *_speed = [[NSString alloc] initWithFormat:@"%0.2f", _scoreRecord.speed];
@@ -124,18 +125,21 @@
             [cell setCellWithRank:_rank Name:_scoreRecord.name Move:_move Time:_time Speed:_speed Score:_score];
             
             [_rank release];
-            [_scoreRecord release];
             [_move release];
             [_time release];
             [_speed release];
             [_score release];
         }
+        else {
+            [cell setCellWithRank:@"" Name:@"" Move:@"" Time:@"" Speed:@"" Score:@""];
+        }
             } else {
-                if (row < [userManagerController.userModel.myScore count]) {
+                if (scoreIndex < [userManagerController.userModel.myScore count]) {
+                   
+                    MCScore *_scoreRecord = [MCScore alloc];
+                    _scoreRecord = [userManagerController.userModel.myScore objectAtIndex:scoreIndex];
                     
-                    MCScore *_scoreRecord = [userManagerController.userModel.myScore objectAtIndex:row];
-                    
-                    NSString *_rank = [[NSString alloc] initWithFormat:@"%d",row+1];
+                    NSString *_rank = [[NSString alloc] initWithFormat:@"%d",scoreIndex+1];
                     NSString *_move = [[NSString alloc] initWithFormat:@"%d", _scoreRecord.move];
                     NSString *_time = [[NSString alloc] initWithFormat:@"%0.2f", _scoreRecord.time];
                     NSString *_speed = [[NSString alloc] initWithFormat:@"%0.2f", _scoreRecord.speed];
@@ -144,11 +148,13 @@
                     [cell setCellWithRank:_rank Name:_scoreRecord.name Move:_move Time:_time Speed:_speed Score:_score];
                     
                     [_rank release];
-                    [_scoreRecord release];
                     [_move release];
                     [_time release];
                     [_speed release];
                     [_score release];
+               }
+                else {
+                    [cell setCellWithRank:@"" Name:@"" Move:@"" Time:@"" Speed:@"" Score:@""];
                 }
 
                     }
@@ -167,7 +173,7 @@
 - (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
 {
     //pop over dismiss, and update user information 
-    [self updateUserInformation];
+    [self updateUserAndScore];
     
     if (popoverController == createUserPopover) {
         
