@@ -81,8 +81,10 @@ static MCUserManagerController* sharedSingleton_ = nil;
         [self updateMyScore];
         
         //add observer to database and user model
+        //notification was sent by MC DB Controller
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(insertUserSuccess:) name:@"DBInsertUserSuccess" object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(insertScoreSuccess) name:@"DBInsertScoreSuccess" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(insertLearnSuccess) name:@"DBInsertLearnSuccess" object:nil];
     }
     
     return self;
@@ -100,7 +102,16 @@ static MCUserManagerController* sharedSingleton_ = nil;
 #pragma mark user methods
 - (void)createNewUser:(NSString *)_name
 {
-    MCUser *newUser = [[MCUser alloc] initWithUserID:0 UserName:_name UserSex:@"unknown" totalGames:0 totalMoves:0 totalTimes:0];
+    for (MCUser* user in userModel.allUser) {
+        if ([user.name isEqualToString:_name]) {
+            //show it's repeat
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"重复了" message:@"你所输入的用户名已经存在,请输入其他再试一次" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
+            [alert show];
+            return;
+        }
+    }
+    
+    MCUser *newUser = [[MCUser alloc] initWithUserID:0 UserName:_name UserSex:@"unknown" totalMoves:0 totalGameTime:0 totalLearnTime:0 totalFinish:0];
     [database insertUser:newUser];
 }
 
@@ -160,6 +171,25 @@ static MCUserManagerController* sharedSingleton_ = nil;
     
     //post notification to view controller to refresh view
     [[NSNotificationCenter defaultCenter] postNotificationName:@"UserManagerSystemUpdateScore" object:nil];
+}
+
+- (void) createNewLearnWithMove:(NSInteger)_move Time:(double)_time
+{
+    NSString* _date = [[[NSDate alloc] init] description];
+    
+    MCLearn* newLearn = [[MCLearn alloc] initWithLearnID:0 userID:userModel.currentUser.userID name:userModel.currentUser.name move:_move time:_time date:_date];
+    [database insertLearn:newLearn];
+}
+
+- (void) insertLearnSuccess
+{
+    //after insert learn record. update information
+    [self updateAllUser];
+    [self updateCurrentUser];
+    
+    //post notification to view controller to refresh view
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"UserManagerSystemUpdateScore" object:nil];
+
 }
 
 - (void)updateTopScore

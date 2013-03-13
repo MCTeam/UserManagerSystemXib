@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD9F08DF16F0DDBE00FDE7F8 /* MCLearn.m in Sources */ = {isa = PBXBuildFile; fileRef = FD9F08DE16F0DDBE00FDE7F8 /* MCLearn.m */; };
 		FDA1FF1116A98F6200F4842C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA1FF1016A98F6200F4842C /* UIKit.framework */; };
 		FDA1FF1316A98F6200F4842C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA1FF1216A98F6200F4842C /* Foundation.framework */; };
 		FDA1FF1516A98F6200F4842C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDA1FF1416A98F6200F4842C /* CoreGraphics.framework */; };
@@ -31,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD9F08DD16F0DDBE00FDE7F8 /* MCLearn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCLearn.h; sourceTree = "<group>"; };
+		FD9F08DE16F0DDBE00FDE7F8 /* MCLearn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCLearn.m; sourceTree = "<group>"; };
 		FDA1FF0C16A98F6200F4842C /* UserManagerSystemXib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserManagerSystemXib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA1FF1016A98F6200F4842C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FDA1FF1216A98F6200F4842C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -153,6 +156,8 @@
 				FDA1FF3616A98FE600F4842C /* MCScore.m */,
 				FDA1FF3716A98FE600F4842C /* MCUser.h */,
 				FDA1FF3816A98FE600F4842C /* MCUser.m */,
+				FD9F08DD16F0DDBE00FDE7F8 /* MCLearn.h */,
+				FD9F08DE16F0DDBE00FDE7F8 /* MCLearn.m */,
 			);
 			name = DataStructureClass;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				FDA1FF5016A9903400F4842C /* PopChangeUserViewController.m in Sources */,
 				FDA1FF5216A9903400F4842C /* PopCreateUserViewController.m in Sources */,
 				FDA1FF5416A9903400F4842C /* ScoreCell.m in Sources */,
+				FD9F08DF16F0DDBE00FDE7F8 /* MCLearn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +370,7 @@
 				FDA1FF2C16A98F6200F4842C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

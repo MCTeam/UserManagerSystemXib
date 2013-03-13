@@ -13,11 +13,12 @@
 @synthesize userID;
 @synthesize name;
 @synthesize sex;
-@synthesize totalGames;
 @synthesize totalMoves;
-@synthesize totalTimes;
+@synthesize totalGameTime;
+@synthesize totalLearnTime;
+@synthesize totalFinish;
 
-- (id)initWithUserID:(NSInteger)_ID UserName:(NSString *)_name UserSex:(NSString *)_sex totalGames:(NSInteger)_games totalMoves:(NSInteger)_moves totalTimes:(double)_times
+- (id)initWithUserID:(NSInteger)_ID UserName:(NSString *)_name UserSex:(NSString *)_sex totalMoves:(NSInteger)_moves totalGameTime:(double)_gameTime totalLearnTime:(double)_learnTime totalFinish:(NSInteger)_finish
 {
     if (self = [self init]) {
         [_name retain];
@@ -28,9 +29,10 @@
         self.userID = _ID;
         self.name = _name;
         self.sex = _sex;
-        self.totalGames = _games;
         self.totalMoves = _moves;
-        self.totalTimes = _times;
+        self.totalGameTime = _gameTime;
+        self.totalLearnTime = _learnTime;
+        self.totalFinish = _finish;
     }
     
     return self;

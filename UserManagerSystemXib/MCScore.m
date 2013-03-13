@@ -23,7 +23,9 @@
 {
     if (self = [self init]) {
 
+        [_name retain];
         [_date retain];
+        [name release];
         [date release];
         
         self.scoreID = _sID;

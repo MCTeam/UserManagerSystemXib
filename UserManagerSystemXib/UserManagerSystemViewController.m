@@ -19,9 +19,12 @@
 @synthesize insertScoreMoveField;
 
 @synthesize currentUserLabel;
-@synthesize totalGamesLabel;
-@synthesize totalTimesLabel;
+@synthesize totalFinishLabel;
+@synthesize totalGameTimeLabel;
 @synthesize totalMovesLabel;
+@synthesize totalLearnTimeLabel;
+@synthesize insertLearnTimeField;
+@synthesize insertLearnMoveField;
 @synthesize createUserPopover;
 @synthesize changeUserPopover;
 @synthesize tableSegment;
@@ -49,11 +52,13 @@
     
     //init user information
     currentUserLabel.text = userManagerController.userModel.currentUser.name;
-    totalGamesLabel.text = [[NSString alloc] initWithFormat:@"%d",userManagerController.userModel.currentUser.totalGames];
+    totalFinishLabel.text = [[NSString alloc] initWithFormat:@"%d",userManagerController.userModel.currentUser.totalFinish];
     totalMovesLabel.text = [[NSString alloc] initWithFormat:@"%d",userManagerController.userModel.currentUser.totalMoves];
-    totalTimesLabel.text = [[NSString alloc] initWithFormat:@"%0.2f",userManagerController.userModel.currentUser.totalTimes];
+    totalGameTimeLabel.text = [[NSString alloc] initWithFormat:@"%0.2f",userManagerController.userModel.currentUser.totalGameTime];
+    totalLearnTimeLabel.text = [[NSString alloc] initWithFormat:@"%0.2f",userManagerController.userModel.currentUser.totalLearnTime];
     
     //observer to refresh the table view
+    //notification was sent by user manager controller
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUserAndScore) name:@"UserManagerSystemUpdateScore" object:nil];
 }
 
@@ -61,12 +66,15 @@
 {
     [self setScoreTable:nil];
     [self setCurrentUserLabel:nil];
-    [self setTotalGamesLabel:nil];
-    [self setTotalTimesLabel:nil];
+    [self setTotalFinishLabel:nil];
+    [self setTotalGameTimeLabel:nil];
     [self setTotalMovesLabel:nil];
     [self setInsertScoreTimeField:nil];
     [self setInsertScoreMoveField:nil];
     [self setTableSegment:nil];
+    [self setInsertLearnTimeField:nil];
+    [self setTotalLearnTimeLabel:nil];
+    [self setInsertLearnMoveField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -79,13 +87,16 @@
 - (void)dealloc {
     [scoreTable release];
     [currentUserLabel release];
-    [totalGamesLabel release];
-    [totalTimesLabel release];
+    [totalFinishLabel release];
+    [totalGameTimeLabel release];
     [totalMovesLabel release];
     [insertScoreTimeField release];
     [insertScoreMoveField release];
     
     [tableSegment release];
+    [insertLearnTimeField release];
+    [totalLearnTimeLabel release];
+    [insertLearnMoveField release];
     [super dealloc];
 }
 
@@ -205,6 +216,11 @@
     [userManagerController createNewScoreWithMove:[insertScoreMoveField.text integerValue] Time:[insertScoreTimeField.text floatValue]];
 }
 
+- (void)insertLearnPress:(id)sender
+{
+    [userManagerController createNewLearnWithMove:[insertLearnMoveField.text integerValue] Time:[insertLearnTimeField.text floatValue]];
+}
+
 - (void)segmentChange:(id)sender
 {
     [scoreTable reloadData];
@@ -214,9 +230,10 @@
 {
     //user information
     currentUserLabel.text = userManagerController.userModel.currentUser.name;
-    totalGamesLabel.text = [[NSString alloc] initWithFormat:@"%d",userManagerController.userModel.currentUser.totalGames];
+    totalFinishLabel.text = [[NSString alloc] initWithFormat:@"%d",userManagerController.userModel.currentUser.totalFinish];
     totalMovesLabel.text = [[NSString alloc] initWithFormat:@"%d",userManagerController.userModel.currentUser.totalMoves];
-    totalTimesLabel.text = [[NSString alloc] initWithFormat:@"%0.2f",userManagerController.userModel.currentUser.totalTimes];
+    totalGameTimeLabel.text = [[NSString alloc] initWithFormat:@"%0.2f",userManagerController.userModel.currentUser.totalGameTime];
+    totalLearnTimeLabel.text = [[NSString alloc] initWithFormat:@"%0.2f",userManagerController.userModel.currentUser.totalLearnTime];
 }
 
 - (void)updateScoreInformation

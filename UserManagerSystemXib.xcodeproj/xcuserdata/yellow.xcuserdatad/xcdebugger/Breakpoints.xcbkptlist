@@ -8,51 +8,129 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "UserManagerSystemXib/UserManagerSystemViewController.m"
-         timestampString = "381372136.966034"
+         timestampString = "384907192.95547"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "210"
-         endingLineNumber = "210"
-         landmarkName = "-segmentChange:"
+         startingLineNumber = "221"
+         endingLineNumber = "221"
+         landmarkName = "-insertLearnPress:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "UserManagerSystemXib/UserManagerSystemViewController.m"
-         timestampString = "381372136.966034"
+         filePath = "UserManagerSystemXib/MCUserManagerController.m"
+         timestampString = "384909074.474958"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "137"
-         endingLineNumber = "137"
-         landmarkName = "-tableView:cellForRowAtIndexPath:"
+         startingLineNumber = "178"
+         endingLineNumber = "178"
+         landmarkName = "-createNewLearnWithMove:Time:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "UserManagerSystemXib/UserManagerSystemViewController.m"
-         timestampString = "381372136.966034"
+         filePath = "UserManagerSystemXib/MCUserManagerController.m"
+         timestampString = "384909074.474958"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "142"
-         endingLineNumber = "142"
-         landmarkName = "-tableView:cellForRowAtIndexPath:"
+         startingLineNumber = "180"
+         endingLineNumber = "180"
+         landmarkName = "-createNewLearnWithMove:Time:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "UserManagerSystemXib/UserManagerSystemViewController.m"
-         timestampString = "381372136.966034"
+         filePath = "UserManagerSystemXib/MCUserManagerController.m"
+         timestampString = "384909074.474958"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "143"
-         endingLineNumber = "143"
-         landmarkName = "-tableView:cellForRowAtIndexPath:"
+         startingLineNumber = "181"
+         endingLineNumber = "181"
+         landmarkName = "-createNewLearnWithMove:Time:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "UserManagerSystemXib/MCDBController.m"
+         timestampString = "384907213.445859"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "405"
+         endingLineNumber = "405"
+         landmarkName = "-insertLearn:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "UserManagerSystemXib/MCDBController.m"
+         timestampString = "384907216.026071"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "414"
+         endingLineNumber = "414"
+         landmarkName = "-insertLearn:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "UserManagerSystemXib/MCDBController.m"
+         timestampString = "384907221.546125"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "428"
+         endingLineNumber = "428"
+         landmarkName = "-insertLearn:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "UserManagerSystemXib/MCDBController.m"
+         timestampString = "384907223.15103"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "431"
+         endingLineNumber = "431"
+         landmarkName = "-insertLearn:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "UserManagerSystemXib/MCDBController.m"
+         timestampString = "384907325.333072"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "408"
+         endingLineNumber = "408"
+         landmarkName = "-insertLearn:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "UserManagerSystemXib/MCDBController.m"
+         timestampString = "384907333.118194"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "407"
+         endingLineNumber = "407"
+         landmarkName = "-insertLearn:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
