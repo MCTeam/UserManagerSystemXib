@@ -97,7 +97,7 @@ static MCDBController* sharedSingleton_ = nil;
         [createSQL release];
         
         //cube state table
-        createSQL = @"CREATE TABLE IF NOT EXISTS cube(cube_id INTEGER PRIMARY KEY, state VARCHAR, date DATE)";
+        createSQL = @"CREATE TABLE IF NOT EXISTS cube(cube_id INTEGER PRIMARY KEY, userid INTEGER, state VARCHAR, date DATE)";
         
         if (sqlite3_exec(database, [createSQL UTF8String], NULL, NULL, &errorMsg)) {
             sqlite3_close(database);
@@ -361,9 +361,9 @@ static MCDBController* sharedSingleton_ = nil;
     
     //select the user to update
     NSString *selectUserSQL = [[NSString alloc] initWithFormat:@"SELECT total_moves,total_game_time,total_finish FROM user WHERE user.userID = %d",_score.userID];
-    int _totalmoves;
-    double _totalGameTime;
-    int _totalFinish;
+    int _totalmoves = 0;
+    double _totalGameTime = 0;
+    int _totalFinish = 0;
     
     sqlite3_stmt *stmt;
     if (sqlite3_prepare_v2(database, [selectUserSQL UTF8String], -1, &stmt, nil) == SQLITE_OK) {
@@ -441,9 +441,9 @@ static MCDBController* sharedSingleton_ = nil;
     
     //select the user to update
     NSString *selectUserSQL = [[NSString alloc] initWithFormat:@"SELECT total_moves,total_learn_time,total_finish FROM user WHERE user.userID = %d",_learn.userID];
-    int _totalmoves;
-    double _totalLearnTime;
-    int _totalFinish;
+    int _totalmoves = 0;
+    double _totalLearnTime = 0;
+    int _totalFinish = 0;
     
     sqlite3_stmt *stmt;
     if (sqlite3_prepare_v2(database, [selectUserSQL UTF8String], -1, &stmt, nil) == SQLITE_OK) {
